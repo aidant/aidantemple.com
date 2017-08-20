@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Aidan is a Full Stack Developer who has a strong passion for building creative user experiences utilising innovative and emerging technologies.'>
+    <meta property='og:image' content='https://aidantemple.com/social.png'>
+    <title>Aidan Temple</title>
+    <link rel='preconnect' href='https://fonts.gstatic.com'>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        font-family: 'Raleway', sans-serif;
+        background-color: black;
+        color: white;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.25rem;
+      }
+
+      body::after {
+        position: absolute;
+        content: '';
+        inset: 0;
+        z-index: -1;
+        background-color: #DF2F2F;
+        clip-path: polygon(0 0, 33% 0, 66% 100%, 0% 100%);
+      }
+
+      .title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        font-size: 12rem;
+        mix-blend-mode: difference;
+        color: #DF2F2F;
+        margin: 0;
+        width: min-content;
+        margin: 4rem;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 65ch;
+        margin: 4rem;
+      }
+
+      .description {
+        max-width: fit-content;
+        font-size: 1.5rem;
+      }
+
+      .role {
+        color: #DF2F2F;
+        font-weight: 700;
+      }
+
+      .links {
+        margin-left: auto;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .github-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      .email-container {
+        display: inline-block;
+        background-color: #DF2F2F;
+      }
+
+      .email {
+        display: block;
+        position: relative;
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        letter-spacing: 0.0625rem;
+        mix-blend-mode: difference;
+        color: #DF2F2F;
+        text-decoration: none;
+        padding: 1rem 2rem;
+      }
+
+      @media screen and (max-width: 96rem) {
+        .description {
+          font-size: unset;
+        }
+      }
+
+      @media screen and (max-width: 64rem) {
+        body {
+          flex-direction: column;
+          font-size: 1rem;
+        }
+
+        body::after {
+          clip-path: polygon(0 0, 100% 0, 100% 45%, 0 55%);
+        }
+
+        .title {
+          font-size: 6rem;
+          margin: 0;
+        }
+
+        .content {
+          box-sizing: border-box;
+          padding: 0rem 1rem;
+          margin: 0;
+        }
+      }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C10D2DP6WF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-C10D2DP6WF');
+    </script>
+  </head>
+  <body>
+    <h1 class='title'>Aidan Temple</h1>
+    <div class='content'>
+      <span class='description'>Aidan is a <span class='role'>Full Stack Developer</span> who has a strong passion for building creative user experiences utilising innovative and emerging technologies. He has multidisciplinary experience in Frontend Development, Backend Development, DevOps Engineering, UI/UX Design, Photography, and Motion Graphics.</span>
+      <div class='links'>
+        <a class='github' href='https://github.com/aidant' target='_blank' rel='noopener noreferrer'>
+          <svg class='github-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 44'>
+            <title>GitHub</title>
+            <path fill='white' d='M22.477.927C10.485.927.76 10.65.76 22.647c0 9.596 6.223 17.736 14.853 20.608 1.087.2 1.483-.471 1.483-1.047 0-.516-.019-1.881-.03-3.693-6.04 1.312-7.315-2.912-7.315-2.912-.988-2.51-2.412-3.178-2.412-3.178-1.972-1.346.149-1.32.149-1.32 2.18.154 3.327 2.239 3.327 2.239 1.937 3.319 5.084 2.36 6.321 1.804.197-1.403.759-2.36 1.379-2.903-4.823-.548-9.894-2.412-9.894-10.734 0-2.371.847-4.311 2.236-5.828-.224-.55-.969-2.759.214-5.748 0 0 1.822-.584 5.972 2.226 1.732-.482 3.59-.722 5.437-.732 1.845.01 3.703.25 5.437.732 4.147-2.81 5.967-2.226 5.967-2.226 1.185 2.989.44 5.198.217 5.748 1.392 1.517 2.232 3.457 2.232 5.828 0 8.344-5.078 10.18-9.916 10.717.779.67 1.474 1.996 1.474 4.021 0 2.904-.027 5.247-.027 5.959 0 .581.392 1.257 1.493 1.045C37.981 40.375 44.2 32.24 44.2 22.647c0-11.996-9.726-21.72-21.722-21.72' />
+          </svg>
+        </a>
+        <div class='email-container'>
+          <a class='email' href='mailto:hello@aidantemple.com' target='_blank' rel='noopener noreferrer'>
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
