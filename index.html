@@ -3,7 +3,7 @@
   <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta name='description' content='Aidan is a Full Stack Developer who has a strong passion for building creative user experiences utilising innovative and emerging technologies.'>
+    <meta name='description' content='I am a Full Stack Developer with a passion for utilising innovative and emerging technologies to build creative user experiences.'>
     <meta property='og:image' content='https://aidantemple.com/social.png'>
     <title>Aidan Temple</title>
     <link rel='preconnect' href='https://fonts.gstatic.com'>
@@ -36,7 +36,8 @@
         inset: 0;
         z-index: -1;
         background-color: #DF2F2F;
-        clip-path: polygon(0 0, 33% 0, 66% 100%, 0% 100%);
+        clip-path: polygon(0 0, 33% 0, 66% 100%, 0 100%);
+        animation: background-horizontal 0.75s cubic-bezier(0.65, 0, 0.35, 1);
       }
 
       .title {
@@ -113,6 +114,7 @@
 
         body::after {
           clip-path: polygon(0 0, 100% 0, 100% 45%, 0 55%);
+          animation: background-portrait 0.75s cubic-bezier(0.65, 0, 0.35, 1);
         }
 
         .title {
@@ -122,8 +124,20 @@
 
         .content {
           box-sizing: border-box;
-          padding: 0rem 1rem;
+          padding: 0rem 2rem;
           margin: 0;
+        }
+      }
+
+      @keyframes background-horizontal {
+        0% {
+          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        }
+      }
+      
+      @keyframes background-portrait {
+        0% {
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         }
       }
     </style>
@@ -139,7 +153,7 @@
   <body>
     <h1 class='title'>Aidan Temple</h1>
     <div class='content'>
-      <span class='description'>Aidan is a <span class='role'>Full Stack Developer</span> who has a strong passion for building creative user experiences utilising innovative and emerging technologies. He has multidisciplinary experience in Frontend Development, Backend Development, DevOps Engineering, UI/UX Design, Photography, and Motion Graphics.</span>
+      <span class='description'>I am a <span class='role'>Full Stack Developer</span> with a passion for utilising innovative and emerging technologies to build creative user experiences. I work best when collaborating in a multidisciplinary environment and have skills in Front-End Development, Back-End Development, DevOps Engineering, and UI/UX Design.</span>
       <div class='links'>
         <a class='github' href='https://github.com/aidant' target='_blank' rel='noopener noreferrer'>
           <svg class='github-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 44'>
