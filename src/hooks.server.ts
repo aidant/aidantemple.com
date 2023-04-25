@@ -3,7 +3,7 @@ export async function handle({ event, resolve }) {
 
   response.headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; style-src fonts.googleapis.com; font-src fonts.googleapis.com",
+    "default-src 'self'; style-src-elem fonts.googleapis.com; font-src fonts.googleapis.com",
   )
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
   response.headers.set('Strict-Transport-Security', 'max-age=31536000')
