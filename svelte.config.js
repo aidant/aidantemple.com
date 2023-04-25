@@ -6,6 +6,9 @@ export default {
   preprocess: vitePreprocess(),
 
   kit: {
+    csp: {
+      mode: 'auto',
+    },
     adapter: adapter(),
   },
 }
