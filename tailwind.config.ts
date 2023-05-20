@@ -7,7 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Raleway"', ...defaultTheme.fontFamily.sans],
-        serif: ['"Playfair Display"', ...defaultTheme.fontFamily.sans],
+        serif: ['"Fraunces"', ...defaultTheme.fontFamily.sans],
       },
     },
   },

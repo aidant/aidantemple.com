@@ -10,8 +10,8 @@ export default {
       mode: 'auto',
       directives: {
         'default-src': ["'self'"],
-        'style-src-elem': ["'self'", 'fonts.googleapis.com'],
-        'font-src': ['fonts.gstatic.com'],
+        'style-src-elem': ["'self'", 'fonts.googleapis.com', 'unsafe-inline'],
+        'font-src': ["'self'", 'fonts.gstatic.com'],
       },
     },
     adapter: adapter(),
