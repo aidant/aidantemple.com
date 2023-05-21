@@ -20,7 +20,7 @@
 </main>
 
 <button
-  use:interactive={{ class: 'h-32 w-32', target: $pointer }}
+  use:interactive={{ class: '!h-32 !w-32', target: $pointer }}
   use:coordinatesLocal={{ target: $pointer }}
   class="h-32 w-32 cursor-none rounded-full border-2 border-white"
 >
