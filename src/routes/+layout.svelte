@@ -1,31 +1,35 @@
 <script>
-  import { coordinatesGlobal } from '$lib/actions/coordinates'
-  import { pointer } from '$lib/stores/pointer'
+  import { hookInteractive } from '$lib/components/pointer.action'
+  import { coordinates, shape } from '$lib/components/pointer.store'
+  import Pointer from '$lib/components/pointer.svelte'
+  import { fade } from 'svelte/transition'
   import '../app.css'
+
+  export let data
 </script>
 
-<slot />
+<main class="h-full w-full">
+  <h1
+    class="underline-offset-6 fixed left-0 top-0 ml-4 mt-4 font-serif text-2xl underline [writing-mode:vertical-rl] md:ml-16 md:mt-16 md:text-6xl"
+  >
+    <a
+      use:hookInteractive={{ shape, coordinates, override: { rounded: 0 } }}
+      aria-label="nagivate home"
+      href="/"
+    >
+      Aidan Temple
+    </a>
+  </h1>
 
-<svelte:body use:coordinatesGlobal />
+  {#key data.url}
+    <div
+      class="h-full w-full"
+      in:fade={{ duration: 125, delay: 125 }}
+      out:fade={{ duration: 125 }}
+    >
+      <slot />
+    </div>
+  {/key}
+</main>
 
-<div
-  id="pointer"
-  bind:this={$pointer}
-  class="fixed h-4 w-4 rounded-full bg-white pointer-events-none mix-blend-difference"
-/>
-
-<style>
-  :global(body):not(:hover) #pointer {
-    display: none;
-  }
-
-  #pointer {
-    transition: 
-      width 0.25s cubic-bezier(0.77, 0, 0.175, 1),
-      height 0.25s cubic-bezier(0.77, 0, 0.175, 1),
-      transform 0.125s cubic-bezier(0.215, 0.610, 0.355, 1);
-
-    transform: translate(-50%, 0) translate(calc(var(--coordinates-x) * 50vw + 50vw), calc(var(--coordinates-y) * 50vh));
-  }
-</style>
-
+<Pointer />
