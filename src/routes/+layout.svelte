@@ -1,4 +1,5 @@
 <script>
+  import AidanTemple from '$lib/components/aidan-temple.svelte'
   import { hookInteractive } from '$lib/components/pointer.action'
   import { coordinates, shape } from '$lib/components/pointer.store'
   import Pointer from '$lib/components/pointer.svelte'
@@ -17,7 +18,7 @@
       aria-label="nagivate home"
       href="/"
     >
-      Aidan Temple
+      <AidanTemple />
     </a>
   </h1>
 
